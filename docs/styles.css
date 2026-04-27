@@ -145,9 +145,26 @@ h3 {
 
 .hero-text,
 .text-block p,
+.about-list,
 .simple-item p {
   color: var(--ink-soft);
   line-height: 1.68;
+}
+
+.about-lead {
+  color: var(--ink);
+  font-weight: 800;
+}
+
+.about-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 20px;
+}
+
+.about-list li::marker {
+  color: var(--accent);
 }
 
 .hero-text {
