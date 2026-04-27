@@ -14,8 +14,8 @@
       href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Prata&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="./styles.css?v=icons-3" />
-    <script defer src="./script.js"></script>
+    <link rel="stylesheet" href="./styles.css?v=education-carousel-1" />
+    <script defer src="./script.js?v=education-carousel-1"></script>
   </head>
   <body>
     <svg class="icon-sprite" aria-hidden="true" focusable="false">
@@ -34,10 +34,6 @@
         <div class="hero-copy">
           <p class="hero-kicker">Кинолог в&nbsp;гуманном подходе</p>
           <h1>Екатерина Соловьёва</h1>
-          <p class="hero-text">
-            Помогаю владельцам лучше понимать свою собаку и выстраивать
-            спокойную, понятную и устойчивую жизнь вместе.
-          </p>
           <div class="hero-actions">
             <a class="button button-dark" href="#formats">Форматы работы</a>
             <a class="button button-light" href="#forms">Записаться на&nbsp;консультацию</a>
@@ -81,34 +77,46 @@
         </div>
 
         <div class="education-gallery">
-          <figure class="education-feature">
-            <img
-              src="./assets/kinolog/education/cert-1.jpeg"
-              alt="Диплом общий"
-            />
-          </figure>
+          <div class="diploma-carousel" aria-label="Страницы диплома">
+            <div class="diploma-slides">
+              <figure class="diploma-slide is-active" data-diploma-slide>
+                <img
+                  src="./assets/kinolog/education/cert-1.jpeg"
+                  alt="Диплом общий"
+                />
+              </figure>
+
+              <figure class="diploma-slide" data-diploma-slide>
+                <img
+                  src="./assets/kinolog/education/cert-2.jpeg"
+                  alt="Сведения о содержании и результатах освоения программы"
+                />
+              </figure>
+
+              <figure class="diploma-slide" data-diploma-slide>
+                <img
+                  src="./assets/kinolog/education/cert-3.jpeg"
+                  alt="Приложение к диплому"
+                />
+              </figure>
+            </div>
+
+            <div class="diploma-controls" aria-label="Навигация по страницам диплома">
+              <button class="diploma-arrow" type="button" data-diploma-prev aria-label="Предыдущая страница диплома">
+                ‹
+              </button>
+              <div class="diploma-dots" aria-label="Выбор страницы диплома">
+                <button class="diploma-dot is-active" type="button" data-diploma-dot="0" aria-label="Первая страница диплома"></button>
+                <button class="diploma-dot" type="button" data-diploma-dot="1" aria-label="Сведения о содержании и результатах освоения программы"></button>
+                <button class="diploma-dot" type="button" data-diploma-dot="2" aria-label="Приложение к диплому"></button>
+              </div>
+              <button class="diploma-arrow" type="button" data-diploma-next aria-label="Следующая страница диплома">
+                ›
+              </button>
+            </div>
+          </div>
 
           <div class="education-list" aria-label="Список дипломов и сертификатов">
-            <button
-              class="education-list-item"
-              type="button"
-              data-modal-image="./assets/kinolog/education/cert-2.jpeg"
-              data-modal-title="Сведения о содержании и результатах освоения программы"
-            >
-              <svg class="education-list-icon" viewBox="0 0 80 80" aria-hidden="true"><use href="#diplomaIcon"></use></svg>
-              <span>Сведения о&nbsp;содержании и&nbsp;результатах освоения программы</span>
-            </button>
-
-            <button
-              class="education-list-item"
-              type="button"
-              data-modal-image="./assets/kinolog/education/cert-3.jpeg"
-              data-modal-title="Приложение к диплому"
-            >
-              <svg class="education-list-icon" viewBox="0 0 80 80" aria-hidden="true"><use href="#diplomaIcon"></use></svg>
-              <span>Приложение к&nbsp;диплому</span>
-            </button>
-
             <button
               class="education-list-item"
               type="button"
@@ -147,6 +155,16 @@
             >
               <svg class="education-list-icon" viewBox="0 0 80 80" aria-hidden="true"><use href="#diplomaIcon"></use></svg>
               <span>Конференция Современный взгляд на&nbsp;благополучие собаки и&nbsp;ее&nbsp;человека (УСК)</span>
+            </button>
+
+            <button
+              class="education-list-item"
+              type="button"
+              data-modal-image="./assets/kinolog/education/cbcon.jpeg"
+              data-modal-title="CBcon"
+            >
+              <svg class="education-list-icon" viewBox="0 0 80 80" aria-hidden="true"><use href="#diplomaIcon"></use></svg>
+              <span>CBcon</span>
             </button>
           </div>
         </div>
