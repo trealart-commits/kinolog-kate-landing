@@ -244,25 +244,13 @@ h3 {
 }
 
 .results-list li {
-  position: relative;
-  padding: 18px 18px 18px 46px;
+  padding: 18px;
   border: 1px solid var(--line);
   border-radius: var(--radius-md);
   background: var(--card);
   color: var(--ink-soft);
   font-weight: 700;
   line-height: 1.45;
-}
-
-.results-list li::before {
-  content: "";
-  position: absolute;
-  top: 23px;
-  left: 20px;
-  width: 10px;
-  height: 10px;
-  border-radius: 50%;
-  background: var(--accent);
 }
 
 .education-gallery {
@@ -460,7 +448,7 @@ h3 {
     transform 220ms ease,
     box-shadow 220ms ease,
     filter 220ms ease;
-  transform-origin: center bottom;
+  transform-origin: center top;
 }
 
 .format-item img {
@@ -478,7 +466,8 @@ h3 {
 .format-list .format-item:hover {
   z-index: 1;
   filter: none;
-  transform: scale(1.05);
+  transform: scale(1.1);
+  box-shadow: 0 18px 46px rgba(45, 40, 36, 0.2);
 }
 
 .format-list .format-item:focus-visible {
@@ -488,7 +477,7 @@ h3 {
 }
 
 .format-list .format-item:hover img {
-  transform: translateY(-4px);
+  transform: translateY(-3px);
 }
 
 .link-item {
