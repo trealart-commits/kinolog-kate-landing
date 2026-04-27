@@ -235,6 +235,36 @@ h3 {
   border: 1px solid var(--line);
 }
 
+.results-list {
+  display: grid;
+  gap: 12px;
+  margin: 20px 0 0;
+  padding: 0;
+  list-style: none;
+}
+
+.results-list li {
+  position: relative;
+  padding: 18px 18px 18px 46px;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: var(--card);
+  color: var(--ink-soft);
+  font-weight: 700;
+  line-height: 1.45;
+}
+
+.results-list li::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 20px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
 .education-gallery {
   display: grid;
   gap: 20px;
@@ -528,6 +558,10 @@ h3 {
   }
 
   .simple-list {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .results-list {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
