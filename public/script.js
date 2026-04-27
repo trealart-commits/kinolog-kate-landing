@@ -1,5 +1,8 @@
 const reveals = document.querySelectorAll(".reveal");
-const carousels = document.querySelectorAll("[data-carousel]");
+const modal = document.querySelector("#certificateModal");
+const modalImage = document.querySelector("[data-modal-img]");
+const modalClose = document.querySelector("[data-modal-close]");
+const certificateButtons = document.querySelectorAll("[data-modal-image]");
 
 const revealObserver = new IntersectionObserver(
   (entries) => {
@@ -20,57 +23,27 @@ reveals.forEach((element, index) => {
   revealObserver.observe(element);
 });
 
-carousels.forEach((carousel) => {
-  const track = carousel.querySelector("[data-carousel-track]");
-  const prevButton = carousel.querySelector("[data-carousel-prev]");
-  const nextButton = carousel.querySelector("[data-carousel-next]");
-  const dots = Array.from(carousel.querySelectorAll(".carousel-dot"));
-  const slides = Array.from(carousel.querySelectorAll(".carousel-slide"));
+certificateButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const image = button.dataset.modalImage;
+    const title = button.dataset.modalTitle || "Сертификат";
 
-  if (!track || slides.length === 0) {
-    return;
-  }
-
-  function getIndex() {
-    const slideWidth = slides[0].getBoundingClientRect().width + 14;
-    if (!slideWidth) {
-      return 0;
+    if (!modal || !modalImage || !image) {
+      return;
     }
 
-    return Math.round(track.scrollLeft / slideWidth);
+    modalImage.src = image;
+    modalImage.alt = title;
+    modal.showModal();
+  });
+});
+
+modalClose?.addEventListener("click", () => {
+  modal?.close();
+});
+
+modal?.addEventListener("click", (event) => {
+  if (event.target === modal) {
+    modal.close();
   }
-
-  function updateDots(index) {
-    dots.forEach((dot, dotIndex) => {
-      dot.classList.toggle("is-active", dotIndex === index);
-    });
-  }
-
-  function goTo(index) {
-    const safeIndex = Math.max(0, Math.min(index, slides.length - 1));
-    slides[safeIndex].scrollIntoView({
-      behavior: "smooth",
-      inline: "start",
-      block: "nearest",
-    });
-    updateDots(safeIndex);
-  }
-
-  prevButton?.addEventListener("click", () => {
-    goTo(getIndex() - 1);
-  });
-
-  nextButton?.addEventListener("click", () => {
-    goTo(getIndex() + 1);
-  });
-
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", () => {
-      goTo(index);
-    });
-  });
-
-  track.addEventListener("scroll", () => {
-    updateDots(getIndex());
-  });
 });
