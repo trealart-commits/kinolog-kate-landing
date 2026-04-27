@@ -278,36 +278,112 @@ h3 {
 
 .education-list-icon {
   position: relative;
-  width: 44px;
-  height: 54px;
+  width: 46px;
+  height: 56px;
   border: 2px solid currentColor;
   border-radius: 2px;
+  background:
+    linear-gradient(currentColor, currentColor) 11px 16px / 18px 2px no-repeat,
+    linear-gradient(currentColor, currentColor) 11px 25px / 22px 2px no-repeat,
+    linear-gradient(currentColor, currentColor) 11px 34px / 14px 2px no-repeat;
 }
 
 .education-list-icon::before,
 .education-list-icon::after {
   content: "";
   position: absolute;
-  border: 2px solid currentColor;
 }
 
 .education-list-icon::before {
-  right: -13px;
-  bottom: 8px;
-  width: 22px;
-  height: 22px;
+  right: -15px;
+  bottom: 7px;
+  width: 24px;
+  height: 24px;
+  background:
+    radial-gradient(circle, transparent 0 6px, currentColor 6px 8px, transparent 8px),
+    conic-gradient(
+      from 10deg,
+      currentColor 0 12deg,
+      transparent 12deg 24deg,
+      currentColor 24deg 36deg,
+      transparent 36deg 48deg,
+      currentColor 48deg 60deg,
+      transparent 60deg 72deg,
+      currentColor 72deg 84deg,
+      transparent 84deg 96deg,
+      currentColor 96deg 108deg,
+      transparent 108deg 120deg,
+      currentColor 120deg 132deg,
+      transparent 132deg 144deg,
+      currentColor 144deg 156deg,
+      transparent 156deg 168deg,
+      currentColor 168deg 180deg,
+      transparent 180deg 192deg,
+      currentColor 192deg 204deg,
+      transparent 204deg 216deg,
+      currentColor 216deg 228deg,
+      transparent 228deg 240deg,
+      currentColor 240deg 252deg,
+      transparent 252deg 264deg,
+      currentColor 264deg 276deg,
+      transparent 276deg 288deg,
+      currentColor 288deg 300deg,
+      transparent 300deg 312deg,
+      currentColor 312deg 324deg,
+      transparent 324deg 336deg,
+      currentColor 336deg 348deg,
+      transparent 348deg 360deg
+    );
   border-radius: 50%;
-  background: var(--paper);
+  box-shadow: inset 0 0 0 9px var(--paper);
 }
 
 .education-list-icon::after {
-  right: -4px;
-  bottom: 15px;
-  width: 6px;
-  height: 10px;
-  border-top: 0;
-  border-left: 0;
-  transform: rotate(45deg);
+  left: 6px;
+  bottom: 4px;
+  width: 10px;
+  height: 8px;
+  border-right: 2px solid currentColor;
+  border-bottom: 2px solid currentColor;
+  transform: skewX(-20deg);
+}
+
+.education-list-item:hover .education-list-icon::before {
+  background:
+    radial-gradient(circle, transparent 0 6px, currentColor 6px 8px, transparent 8px),
+    conic-gradient(
+      from 10deg,
+      currentColor 0 12deg,
+      transparent 12deg 24deg,
+      currentColor 24deg 36deg,
+      transparent 36deg 48deg,
+      currentColor 48deg 60deg,
+      transparent 60deg 72deg,
+      currentColor 72deg 84deg,
+      transparent 84deg 96deg,
+      currentColor 96deg 108deg,
+      transparent 108deg 120deg,
+      currentColor 120deg 132deg,
+      transparent 132deg 144deg,
+      currentColor 144deg 156deg,
+      transparent 156deg 168deg,
+      currentColor 168deg 180deg,
+      transparent 180deg 192deg,
+      currentColor 192deg 204deg,
+      transparent 204deg 216deg,
+      currentColor 216deg 228deg,
+      transparent 228deg 240deg,
+      currentColor 240deg 252deg,
+      transparent 252deg 264deg,
+      currentColor 264deg 276deg,
+      transparent 276deg 288deg,
+      currentColor 288deg 300deg,
+      transparent 300deg 312deg,
+      currentColor 312deg 324deg,
+      transparent 324deg 336deg,
+      currentColor 336deg 348deg,
+      transparent 348deg 360deg
+    );
 }
 
 .certificate-modal {
