@@ -242,15 +242,18 @@ h3 {
 
 .education-feature {
   margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius-md);
+  background: #fff;
 }
 
 .education-feature img {
   width: 100%;
   max-height: 560px;
-  object-fit: contain;
-  border: 1px solid var(--line);
-  border-radius: var(--radius-md);
-  background: #fff;
+  object-fit: cover;
+  transform: scale(1.012);
+  transform-origin: center center;
 }
 
 .education-list {
