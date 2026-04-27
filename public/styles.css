@@ -243,7 +243,7 @@ h3 {
 
 .education-list-item {
   display: grid;
-  grid-template-columns: 58px minmax(0, 1fr);
+  grid-template-columns: 72px minmax(0, 1fr);
   gap: 20px;
   align-items: center;
   width: 100%;
@@ -277,11 +277,11 @@ h3 {
 }
 
 .education-list-icon {
-  width: 58px;
-  height: 58px;
+  width: 68px;
+  height: 68px;
   fill: none;
   stroke: currentColor;
-  stroke-width: 2.2;
+  stroke-width: 2.4;
   stroke-linecap: round;
   stroke-linejoin: round;
 }
@@ -289,10 +289,9 @@ h3 {
 .certificate-modal {
   width: min(980px, calc(100% - 24px));
   max-height: calc(100vh - 32px);
-  padding: 48px 18px 18px;
+  padding: 48px 0 0;
   border: none;
-  border-radius: var(--radius-md);
-  background: #fff;
+  background: transparent;
 }
 
 .certificate-modal::backdrop {
@@ -303,6 +302,8 @@ h3 {
   width: 100%;
   max-height: calc(100vh - 112px);
   object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
 }
 
 .modal-close {
@@ -477,7 +478,7 @@ h3 {
   }
 
   .education-list-item {
-    grid-template-columns: 44px minmax(0, 1fr);
+    grid-template-columns: 58px minmax(0, 1fr);
     gap: 16px;
   }
 
@@ -486,8 +487,8 @@ h3 {
   }
 
   .education-list-icon {
-    width: 34px;
-    height: 44px;
+    width: 54px;
+    height: 54px;
   }
 
   .format-list {
