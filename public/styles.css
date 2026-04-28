@@ -494,6 +494,14 @@ h3 {
   line-height: 1.4;
 }
 
+.forms-note {
+  margin: 16px 0 0;
+  max-width: 38rem;
+  color: var(--ink-soft);
+  font-weight: 700;
+  line-height: 1.55;
+}
+
 .social-links {
   display: flex;
   justify-content: center;
